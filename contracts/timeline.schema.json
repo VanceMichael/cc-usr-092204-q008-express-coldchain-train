@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "货损争议时间线",
+  "type": "object",
+  "required": ["batch_id", "root_batch_ids", "final_status",
+               "contributors", "entries"],
+  "properties": {
+    "batch_id": {"type": "string"},
+    "root_batch_ids": {"type": "array", "items": {"type": "string"},
+                       "description": "拆分/合并追溯到的原始批次"},
+    "final_status": {"type": "string"},
+    "contributors": {
+      "type": "array",
+      "description": "等待、温控、隔离、人工放行对最终结果的贡献",
+      "items": {
+        "type": "object",
+        "required": ["factor", "impact"],
+        "properties": {
+          "factor": {"type": "string"},
+          "segment": {"type": "string"},
+          "wait_min": {"type": "number"},
+          "out_of_window_min": {"type": "number"},
+          "impact": {"type": "string"},
+          "raised_at": {"type": "string"},
+          "trigger_event_id": {"type": "string"},
+          "disposition": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["at", "kind", "title", "detail"],
+        "properties": {
+          "at": {"type": "string"},
+          "kind": {"type": "string", "enum": [
+            "TENDER", "WAIT", "TEMP", "SCAN", "QUARANTINE",
+            "DECISION", "PRIORITY", "DISPOSITION", "DEPARTURE"]},
+          "title": {"type": "string"},
+          "detail": {"type": "string"},
+          "backfill": {"type": "boolean"},
+          "admissible": {"type": "boolean"},
+          "actor": {"type": ["string", "null"]},
+          "event_id": {"type": "string"},
+          "action": {"type": "string"},
+          "reasons": {"type": "array", "items": {"type": "string"}},
+          "superseded_by": {"type": ["integer", "null"]},
+          "wait_min": {"type": "number"},
+          "out_of_window_min": {"type": "number"}
+        }
+      }
+    }
+  }
+}

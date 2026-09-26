@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "事件上报信封",
+  "type": "object",
+  "required": ["type", "payload"],
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "service_defined",
+        "service_consist_changed",
+        "feeder_defined",
+        "batch_tendered",
+        "batch_split",
+        "batch_merge",
+        "batch_eta",
+        "batch_arrived",
+        "priority_change",
+        "scan",
+        "clock_sync",
+        "sensor_state",
+        "temp_reading",
+        "quarantine_dispose"
+      ]
+    },
+    "payload": {
+      "type": "object",
+      "required": ["event_id", "occurred_at"],
+      "properties": {
+        "event_id": {"type": "string", "minLength": 1},
+        "occurred_at": {"type": "string", "description": "ISO-8601 带时区时间（现场时间）"},
+        "received_at": {"type": "string"},
+        "backfill": {"type": "boolean", "description": "断网恢复后补报必须置 true"}
+      }
+    },
+    "source": {"type": "string"}
+  },
+  "additionalProperties": false
+}

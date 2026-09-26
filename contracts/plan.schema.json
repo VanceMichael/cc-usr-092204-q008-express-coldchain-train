@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "班次装载计划（截关前可执行清单）",
+  "type": "object",
+  "required": ["service_id", "plan_version", "generated_at", "cutoff",
+               "depart_at", "summary", "capacity", "decisions"],
+  "properties": {
+    "service_id": {"type": "string"},
+    "plan_version": {"type": "integer", "minimum": 1},
+    "generated_at": {"type": "string"},
+    "cutoff": {"type": "string"},
+    "depart_at": {"type": "string"},
+    "consist_version": {"type": "integer", "minimum": 0},
+    "summary": {
+      "type": "object",
+      "properties": {
+        "LOAD": {"type": "integer", "minimum": 0},
+        "ROLLOVER": {"type": "integer", "minimum": 0},
+        "HOLD": {"type": "integer", "minimum": 0}
+      }
+    },
+    "capacity": {"type": "array", "items": {"type": "object"}},
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["batch_id", "action", "reason_codes",
+                     "pallet_ids", "basis", "checklist"],
+        "properties": {
+          "action": {"type": "string", "enum": ["LOAD", "ROLLOVER", "HOLD"]},
+          "reason_codes": {"type": "array", "items": {"type": "string"}},
+          "car_id": {"type": ["string", "null"]},
+          "zone": {"type": ["string", "null"]},
+          "target_service_id": {"type": ["string", "null"]},
+          "feeder_id": {"type": ["string", "null"]},
+          "reserve_id": {"type": ["string", "null"]},
+          "superseded_by": {"type": ["integer", "null"]},
+          "basis": {"type": "object"},
+          "checklist": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["step", "owner", "detail"],
+              "properties": {
+                "step": {"type": "string"},
+                "deadline": {"type": ["string", "null"]},
+                "owner": {"type": "string"},
+                "detail": {"type": "string"}
+              }
+            }
+          },
+          "warnings": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

@@ -33,6 +33,9 @@
         "type": "string"
       },
       "description": "领域术语"
+    },
+    "sample_id": {
+      "type": "string"
     }
   },
   "additionalProperties": false

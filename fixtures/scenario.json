@@ -1,0 +1,793 @@
+[
+  {
+    "type": "service_defined",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-S100-DEF",
+      "occurred_at": "2026-09-26T00:05:00+08:00",
+      "service_id": "S100",
+      "origin": "HFE",
+      "destination": "SHH",
+      "depart_at": "2026-09-26T10:00:00+08:00",
+      "arrive_at": "2026-09-26T14:00:00+08:00",
+      "load_cutoff": "2026-09-26T09:30:00+08:00",
+      "unload_lead_min": 40,
+      "cars": [
+        {
+          "car_id": "C1",
+          "zones": [
+            {
+              "zone": "CHILL",
+              "positions": 6,
+              "weight_kg": 6000,
+              "volume_m3": 40
+            }
+          ]
+        },
+        {
+          "car_id": "C-FRZ1",
+          "zones": [
+            {
+              "zone": "FROZEN",
+              "positions": 6,
+              "weight_kg": 4000,
+              "volume_m3": 24
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "service_defined",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-S102-DEF",
+      "occurred_at": "2026-09-26T00:05:00+08:00",
+      "service_id": "S102",
+      "origin": "HFE",
+      "destination": "SHH",
+      "depart_at": "2026-09-26T16:00:00+08:00",
+      "arrive_at": "2026-09-26T20:00:00+08:00",
+      "load_cutoff": "2026-09-26T15:30:00+08:00",
+      "unload_lead_min": 40,
+      "cars": [
+        {
+          "car_id": "C3",
+          "zones": [
+            {
+              "zone": "CHILL",
+              "positions": 14,
+              "weight_kg": 6000,
+              "volume_m3": 40
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "feeder_defined",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-F1",
+      "occurred_at": "2026-09-26T00:06:00+08:00",
+      "feeder_id": "F-SHH-1500",
+      "carrier_id": "CARRIER-LU",
+      "station": "SHH",
+      "handoff_cutoff": "2026-09-26T15:30:00+08:00",
+      "depart_at": "2026-09-26T16:00:00+08:00"
+    }
+  },
+  {
+    "type": "feeder_defined",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-F2",
+      "occurred_at": "2026-09-26T00:06:00+08:00",
+      "feeder_id": "F-SHH-2100",
+      "carrier_id": "CARRIER-LU",
+      "station": "SHH",
+      "handoff_cutoff": "2026-09-26T21:00:00+08:00",
+      "depart_at": "2026-09-26T21:30:00+08:00"
+    }
+  },
+  {
+    "type": "sensor_state",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-SN1-OK",
+      "occurred_at": "2026-09-26T03:50:00+08:00",
+      "sensor_id": "SN-1",
+      "quality": "OK",
+      "calibrated": true,
+      "calib_until": "2026-12-01T00:00:00+08:00",
+      "max_gap_min": 180
+    }
+  },
+  {
+    "type": "sensor_state",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-SN2-OK",
+      "occurred_at": "2026-09-26T04:50:00+08:00",
+      "sensor_id": "SN-2",
+      "quality": "OK",
+      "calibrated": true,
+      "calib_until": "2026-12-01T00:00:00+08:00",
+      "max_gap_min": 180
+    }
+  },
+  {
+    "type": "sensor_state",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-SN3-OK",
+      "occurred_at": "2026-09-26T05:20:00+08:00",
+      "sensor_id": "SN-3",
+      "quality": "OK",
+      "calibrated": true,
+      "calib_until": "2026-12-01T00:00:00+08:00",
+      "max_gap_min": 180
+    }
+  },
+  {
+    "type": "sensor_state",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-SN4-OK",
+      "occurred_at": "2026-09-26T05:50:00+08:00",
+      "sensor_id": "SN-4",
+      "quality": "OK",
+      "calibrated": true,
+      "calib_until": "2026-12-01T00:00:00+08:00",
+      "max_gap_min": 180
+    }
+  },
+  {
+    "type": "sensor_state",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-SN5-OK",
+      "occurred_at": "2026-09-26T06:10:00+08:00",
+      "sensor_id": "SN-5",
+      "quality": "OK",
+      "calibrated": true,
+      "calib_until": "2026-12-01T00:00:00+08:00",
+      "max_gap_min": 180
+    }
+  },
+  {
+    "type": "sensor_state",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-SN9-BAD",
+      "occurred_at": "2026-09-26T09:00:00+08:00",
+      "sensor_id": "SN-9",
+      "quality": "INVALID",
+      "calibrated": false,
+      "calib_until": null,
+      "max_gap_min": 30
+    }
+  },
+  {
+    "type": "batch_tendered",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-B7001-T",
+      "occurred_at": "2026-09-26T04:00:00+08:00",
+      "batch_id": "B-7001",
+      "shipper_id": "S-FRESH",
+      "origin": "HFE",
+      "destination": "SHH",
+      "commodity": "冷鲜水产",
+      "temp_zone": "CHILL",
+      "temp_min": 0,
+      "temp_max": 4,
+      "hard_temp_min": -1,
+      "hard_temp_max": 7,
+      "weight_kg": 960,
+      "volume_m3": 3.2,
+      "exposure_budget_min": 120,
+      "priority": "P2",
+      "pallets": [
+        {
+          "pallet_id": "P-7001-1",
+          "weight_kg": 240,
+          "volume_m3": 0.8
+        },
+        {
+          "pallet_id": "P-7001-2",
+          "weight_kg": 240,
+          "volume_m3": 0.8
+        },
+        {
+          "pallet_id": "P-7001-3",
+          "weight_kg": 240,
+          "volume_m3": 0.8
+        },
+        {
+          "pallet_id": "P-7001-4",
+          "weight_kg": 240,
+          "volume_m3": 0.8
+        }
+      ]
+    }
+  },
+  {
+    "type": "batch_tendered",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-B7002-T",
+      "occurred_at": "2026-09-26T05:00:00+08:00",
+      "batch_id": "B-7002",
+      "shipper_id": "S-BERRY",
+      "origin": "HFE",
+      "destination": "SHH",
+      "commodity": "浆果",
+      "temp_zone": "CHILL",
+      "temp_min": 2,
+      "temp_max": 6,
+      "hard_temp_min": 0,
+      "hard_temp_max": 8,
+      "weight_kg": 420,
+      "volume_m3": 1.6,
+      "exposure_budget_min": 90,
+      "priority": "P3",
+      "pallets": [
+        {
+          "pallet_id": "P-7002-1",
+          "weight_kg": 210,
+          "volume_m3": 0.8
+        },
+        {
+          "pallet_id": "P-7002-2",
+          "weight_kg": 210,
+          "volume_m3": 0.8
+        }
+      ]
+    }
+  },
+  {
+    "type": "batch_tendered",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-B7003-T",
+      "occurred_at": "2026-09-26T05:30:00+08:00",
+      "batch_id": "B-7003",
+      "shipper_id": "S-MEAT",
+      "origin": "HFE",
+      "destination": "SHH",
+      "commodity": "冻肉",
+      "temp_zone": "FROZEN",
+      "temp_min": -20,
+      "temp_max": -16,
+      "hard_temp_min": -25,
+      "hard_temp_max": -12,
+      "weight_kg": 2400,
+      "volume_m3": 12,
+      "exposure_budget_min": 60,
+      "priority": "P1",
+      "pallets": [
+        {
+          "pallet_id": "P-7003-1",
+          "weight_kg": 400,
+          "volume_m3": 2.0
+        },
+        {
+          "pallet_id": "P-7003-2",
+          "weight_kg": 400,
+          "volume_m3": 2.0
+        },
+        {
+          "pallet_id": "P-7003-3",
+          "weight_kg": 400,
+          "volume_m3": 2.0
+        },
+        {
+          "pallet_id": "P-7003-4",
+          "weight_kg": 400,
+          "volume_m3": 2.0
+        },
+        {
+          "pallet_id": "P-7003-5",
+          "weight_kg": 400,
+          "volume_m3": 2.0
+        },
+        {
+          "pallet_id": "P-7003-6",
+          "weight_kg": 400,
+          "volume_m3": 2.0
+        }
+      ]
+    }
+  },
+  {
+    "type": "batch_tendered",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-B7004-T",
+      "occurred_at": "2026-09-26T06:00:00+08:00",
+      "batch_id": "B-7004",
+      "shipper_id": "S-DAIRY",
+      "origin": "HFE",
+      "destination": "SHH",
+      "commodity": "低温乳制品",
+      "temp_zone": "CHILL",
+      "temp_min": 2,
+      "temp_max": 6,
+      "hard_temp_min": 0,
+      "hard_temp_max": 9,
+      "weight_kg": 1800,
+      "volume_m3": 7.2,
+      "exposure_budget_min": 120,
+      "priority": "P2",
+      "pallets": [
+        {
+          "pallet_id": "P-7004-1",
+          "weight_kg": 300,
+          "volume_m3": 1.2
+        },
+        {
+          "pallet_id": "P-7004-2",
+          "weight_kg": 300,
+          "volume_m3": 1.2
+        },
+        {
+          "pallet_id": "P-7004-3",
+          "weight_kg": 300,
+          "volume_m3": 1.2
+        },
+        {
+          "pallet_id": "P-7004-4",
+          "weight_kg": 300,
+          "volume_m3": 1.2
+        },
+        {
+          "pallet_id": "P-7004-5",
+          "weight_kg": 300,
+          "volume_m3": 1.2
+        },
+        {
+          "pallet_id": "P-7004-6",
+          "weight_kg": 300,
+          "volume_m3": 1.2
+        }
+      ]
+    }
+  },
+  {
+    "type": "batch_tendered",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-B7005-T",
+      "occurred_at": "2026-09-26T06:20:00+08:00",
+      "batch_id": "B-7005",
+      "shipper_id": "S-FRESH",
+      "origin": "HFE",
+      "destination": "SHH",
+      "commodity": "冷鲜蔬菜",
+      "temp_zone": "CHILL",
+      "temp_min": 1,
+      "temp_max": 5,
+      "hard_temp_min": -1,
+      "hard_temp_max": 8,
+      "weight_kg": 900,
+      "volume_m3": 3.6,
+      "exposure_budget_min": 150,
+      "priority": "P3",
+      "pallets": [
+        {
+          "pallet_id": "P-7005-1",
+          "weight_kg": 225,
+          "volume_m3": 0.9
+        },
+        {
+          "pallet_id": "P-7005-2",
+          "weight_kg": 225,
+          "volume_m3": 0.9
+        },
+        {
+          "pallet_id": "P-7005-3",
+          "weight_kg": 225,
+          "volume_m3": 0.9
+        },
+        {
+          "pallet_id": "P-7005-4",
+          "weight_kg": 225,
+          "volume_m3": 0.9
+        }
+      ]
+    }
+  },
+  {
+    "type": "batch_tendered",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-B7006-T",
+      "occurred_at": "2026-09-26T06:40:00+08:00",
+      "batch_id": "B-7006",
+      "shipper_id": "S-BERRY",
+      "origin": "HFE",
+      "destination": "SHH",
+      "commodity": "浆果",
+      "temp_zone": "CHILL",
+      "temp_min": 2,
+      "temp_max": 6,
+      "hard_temp_min": 0,
+      "hard_temp_max": 8,
+      "weight_kg": 205,
+      "volume_m3": 0.8,
+      "exposure_budget_min": 90,
+      "priority": "P3",
+      "pallets": [
+        {
+          "pallet_id": "P-7006-1",
+          "weight_kg": 205,
+          "volume_m3": 0.8
+        }
+      ]
+    }
+  },
+  {
+    "type": "temp_reading",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-T1",
+      "occurred_at": "2026-09-26T05:00:00+08:00",
+      "batch_id": "B-7001",
+      "sensor_id": "SN-1",
+      "temp_c": 2.1
+    }
+  },
+  {
+    "type": "temp_reading",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-T2",
+      "occurred_at": "2026-09-26T07:00:00+08:00",
+      "batch_id": "B-7001",
+      "sensor_id": "SN-1",
+      "temp_c": 3.0
+    }
+  },
+  {
+    "type": "temp_reading",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-T3",
+      "occurred_at": "2026-09-26T09:20:00+08:00",
+      "batch_id": "B-7001",
+      "sensor_id": "SN-1",
+      "temp_c": 3.4
+    }
+  },
+  {
+    "type": "temp_reading",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-T4",
+      "occurred_at": "2026-09-26T07:00:00+08:00",
+      "batch_id": "B-7002",
+      "sensor_id": "SN-2",
+      "temp_c": 4.1
+    }
+  },
+  {
+    "type": "temp_reading",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-T5",
+      "occurred_at": "2026-09-26T09:00:00+08:00",
+      "batch_id": "B-7002",
+      "sensor_id": "SN-2",
+      "temp_c": 4.2
+    }
+  },
+  {
+    "type": "temp_reading",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-T6",
+      "occurred_at": "2026-09-26T08:30:00+08:00",
+      "batch_id": "B-7003",
+      "sensor_id": "SN-3",
+      "temp_c": -18.2
+    }
+  },
+  {
+    "type": "temp_reading",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-T7",
+      "occurred_at": "2026-09-26T08:40:00+08:00",
+      "batch_id": "B-7004",
+      "sensor_id": "SN-4",
+      "temp_c": 4.0
+    }
+  },
+  {
+    "type": "temp_reading",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-T8",
+      "occurred_at": "2026-09-26T08:50:00+08:00",
+      "batch_id": "B-7005",
+      "sensor_id": "SN-5",
+      "temp_c": 3.2
+    }
+  },
+  {
+    "type": "batch_eta",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-ETA1",
+      "occurred_at": "2026-09-26T08:30:00+08:00",
+      "batch_id": "B-7001",
+      "eta": "2026-09-26T09:25:00+08:00"
+    }
+  },
+  {
+    "type": "batch_arrived",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-ARR3",
+      "occurred_at": "2026-09-26T08:00:00+08:00",
+      "batch_id": "B-7003",
+      "arrived_at": "2026-09-26T08:00:00+08:00",
+      "seal_ok": true
+    }
+  },
+  {
+    "type": "batch_arrived",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-ARR4",
+      "occurred_at": "2026-09-26T08:10:00+08:00",
+      "batch_id": "B-7004",
+      "arrived_at": "2026-09-26T08:10:00+08:00",
+      "seal_ok": true
+    }
+  },
+  {
+    "type": "batch_arrived",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-ARR5",
+      "occurred_at": "2026-09-26T08:20:00+08:00",
+      "batch_id": "B-7005",
+      "arrived_at": "2026-09-26T08:20:00+08:00",
+      "seal_ok": true
+    }
+  },
+  {
+    "type": "batch_arrived",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-ARR2",
+      "occurred_at": "2026-09-26T08:30:00+08:00",
+      "batch_id": "B-7002",
+      "arrived_at": "2026-09-26T08:30:00+08:00",
+      "seal_ok": true
+    }
+  },
+  {
+    "type": "batch_arrived",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-ARR6",
+      "occurred_at": "2026-09-26T08:40:00+08:00",
+      "batch_id": "B-7006",
+      "arrived_at": "2026-09-26T08:40:00+08:00",
+      "seal_ok": true
+    }
+  },
+  {
+    "type": "sensor_state",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-SN7-OK",
+      "occurred_at": "2026-09-26T06:30:00+08:00",
+      "sensor_id": "SN-7",
+      "quality": "OK",
+      "calibrated": true,
+      "calib_until": "2026-12-01T00:00:00+08:00",
+      "max_gap_min": 180
+    }
+  },
+  {
+    "type": "batch_tendered",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-B7007-T",
+      "occurred_at": "2026-09-26T06:50:00+08:00",
+      "batch_id": "B-7007",
+      "shipper_id": "S-DAIRY",
+      "origin": "HFE",
+      "destination": "SHH",
+      "commodity": "低温乳制品",
+      "temp_zone": "CHILL",
+      "temp_min": 2,
+      "temp_max": 6,
+      "hard_temp_min": 0,
+      "hard_temp_max": 9,
+      "weight_kg": 600,
+      "volume_m3": 2.4,
+      "exposure_budget_min": 120,
+      "priority": "P3",
+      "pallets": [
+        {
+          "pallet_id": "P-7007-1",
+          "weight_kg": 300,
+          "volume_m3": 1.2
+        },
+        {
+          "pallet_id": "P-7007-2",
+          "weight_kg": 300,
+          "volume_m3": 1.2
+        }
+      ]
+    }
+  },
+  {
+    "type": "temp_reading",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-T12",
+      "occurred_at": "2026-09-26T09:00:00+08:00",
+      "batch_id": "B-7007",
+      "sensor_id": "SN-7",
+      "temp_c": 4.4
+    }
+  },
+  {
+    "type": "batch_arrived",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-ARR7",
+      "occurred_at": "2026-09-26T08:45:00+08:00",
+      "batch_id": "B-7007",
+      "arrived_at": "2026-09-26T08:45:00+08:00",
+      "seal_ok": true
+    }
+  },
+  {
+    "type": "service_consist_changed",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-CONSIST1",
+      "occurred_at": "2026-09-26T08:55:00+08:00",
+      "service_id": "S100",
+      "reason": "机械故障，C-FRZ1 冷藏车在过检时被摘下，加挂普通保温车 C-CH2",
+      "removed_car_ids": [
+        "C-FRZ1"
+      ],
+      "cars": [
+        {
+          "car_id": "C-CH2",
+          "zones": [
+            {
+              "zone": "CHILL",
+              "positions": 2,
+              "weight_kg": 2400,
+              "volume_m3": 16
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "priority_change",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-PRIO5",
+      "occurred_at": "2026-09-26T09:00:00+08:00",
+      "batch_id": "B-7005",
+      "new_priority": "P1",
+      "business_reason": "客户升级合同时效赔付条款，晚班交付将触发全额时效赔付",
+      "ref": "SO-88421",
+      "actor": "ops-liu"
+    }
+  },
+  {
+    "type": "scan",
+    "source": "device",
+    "payload": {
+      "event_id": "E-SCAN1",
+      "occurred_at": "2026-09-26T09:05:00+08:00",
+      "received_at": "2026-09-26T09:25:00+08:00",
+      "scan_id": "SC-1",
+      "device_id": "D-55",
+      "pallet_id": "P-7005-1",
+      "batch_id": "B-7005",
+      "kind": "ARRIVAL"
+    }
+  },
+  {
+    "type": "scan",
+    "source": "device",
+    "payload": {
+      "event_id": "E-SCAN2",
+      "occurred_at": "2026-09-26T09:06:00+08:00",
+      "received_at": "2026-09-26T09:25:00+08:00",
+      "scan_id": "SC-2",
+      "device_id": "D-55",
+      "pallet_id": "P-7005-2",
+      "batch_id": "B-7005",
+      "kind": "ARRIVAL"
+    }
+  },
+  {
+    "type": "clock_sync",
+    "source": "device",
+    "payload": {
+      "event_id": "E-CLK1",
+      "occurred_at": "2026-09-26T09:26:00+08:00",
+      "device_time": "2026-09-26T09:16:00+08:00",
+      "server_time": "2026-09-26T09:26:00+08:00",
+      "device_id": "D-55"
+    }
+  },
+  {
+    "type": "temp_reading",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-T9",
+      "occurred_at": "2026-09-26T09:05:00+08:00",
+      "batch_id": "B-7006",
+      "sensor_id": "SN-9",
+      "temp_c": 3.0
+    }
+  },
+  {
+    "type": "batch_arrived",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-ARR1",
+      "occurred_at": "2026-09-26T09:40:00+08:00",
+      "batch_id": "B-7001",
+      "arrived_at": "2026-09-26T09:40:00+08:00",
+      "seal_ok": true
+    }
+  },
+  {
+    "type": "temp_reading",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-T10",
+      "occurred_at": "2026-09-26T09:35:00+08:00",
+      "received_at": "2026-09-26T09:42:00+08:00",
+      "batch_id": "B-7001",
+      "sensor_id": "SN-1",
+      "temp_c": 8.2
+    }
+  },
+  {
+    "type": "temp_reading",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-T11",
+      "occurred_at": "2026-09-26T09:50:00+08:00",
+      "received_at": "2026-09-26T10:02:00+08:00",
+      "backfill": true,
+      "batch_id": "B-7001",
+      "sensor_id": "SN-1",
+      "temp_c": 3.1
+    }
+  },
+  {
+    "type": "quarantine_dispose",
+    "source": "fixture",
+    "payload": {
+      "event_id": "E-QD1",
+      "occurred_at": "2026-09-26T09:55:00+08:00",
+      "batch_id": "B-7001",
+      "code": "HARD_BREACH",
+      "disposition": "RELEASED",
+      "reason": "开箱复核货品中心温度 3.2°C，判断为车门开启期间环境热冲击，非冷链断链",
+      "actor": "qc-wang",
+      "ref": "QC-20260926-03"
+    }
+  }
+]
